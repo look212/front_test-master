@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  node:
+    container_name: front_test
+    build:
+      context: ../
+      dockerfile: docker/node/Dockerfile
+    ports:
+      - "3000:3000"
+    working_dir: /code
+    volumes:
+      - ../:/code
+    
